@@ -1,7 +1,15 @@
-exports.generateText = (name, age) => {
+// exports.generateText = (name, age) => {
+//   // Returns output text
+//   return `${name} (${age} years old)`;
+// };
+
+
+// Integratiion Test
+const generateText = (name, age) => {
   // Returns output text
   return `${name} (${age} years old)`;
 };
+
 
 exports.createElement = (type, text, className) => {
   // Creates a new HTML element and returns it
@@ -11,7 +19,22 @@ exports.createElement = (type, text, className) => {
   return newElement;
 };
 
-exports.validateInput = (text, notEmpty, isNumber) => {
+// exports.validateInput = (text, notEmpty, isNumber) => {
+//   // Validate user input with two pre-defined rules
+//   if (!text) {
+//     return false;
+//   }
+//   if (notEmpty && text.trim().length === 0) {
+//     return false;
+//   }
+//   if (isNumber && +text === NaN) {
+//     return false;
+//   }
+//   return true;
+// };
+
+// Integartion Testing
+const validateInput = (text, notEmpty, isNumber) => {
   // Validate user input with two pre-defined rules
   if (!text) {
     return false;
@@ -34,3 +57,6 @@ exports.checkGenerateText=(name, age)=>{
   }
   return generateText(name,age);
 }
+
+exports.generateText=generateText;
+exports.validateInput=validateInput;
