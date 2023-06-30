@@ -36,7 +36,14 @@ test('should click around', async ()=>{
     });
     const  page= await browser.newPage();
     await page.goto('C:/Users/Adewole/Desktop/TYPESCRIPT/js-testing-introduction-starting-setup/js-testing-introduction-starting-setup/index.html');
-})
+    await page.click('input#name');
+    await page.type('input#name', 'Akinola');
+
+    await page.click('input#age');
+    await page.click('input#age', '28');
+
+    await page.click('#btnAddUser');
+}, 25000);
 
 
 
