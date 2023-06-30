@@ -27,6 +27,7 @@ test('should generate a valid text output',()=>{
 })
 
 
+// End to End Test
 test('should click around', async ()=>{
     const browser= await puppeteer.launch({
         headless:false,
