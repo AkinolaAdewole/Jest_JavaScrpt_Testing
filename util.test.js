@@ -28,8 +28,9 @@ test('should generate a valid text output',()=>{
 
 
 // End to End Test
-test('should click around', async ()=>{
+test('should create an element with text and correct class', async ()=>{
     const browser= await puppeteer.launch({
+        // headless:true,
         headless:false,
         slowMo:80,
         args:['--window-size=1920, 1080']
@@ -40,10 +41,13 @@ test('should click around', async ()=>{
     await page.type('input#name', 'Akinola');
 
     await page.click('input#age');
-    await page.click('input#age', '28');
+    await page.click('input#age', 28);
 
     await page.click('#btnAddUser');
-}, 25000);
+
+    // const finalText = await page.$eval('.user-list', el=>el.textContent);
+    // expect(finalText).toBe('Akinola (28 years old)');
+},25000);
 
 
 
